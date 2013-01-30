@@ -19,10 +19,8 @@ resolvers <<= (resolvers) { r =>
 
 externalResolvers <<= (resolvers) map identity
 
-libraryDependencies <+= (sbtVersion) { sv =>
-  "org.scala-tools.sbt" %% "scripted-plugin" % sv
-}
-
 libraryDependencies += "ivysvn" % "ivysvn" % "2.1.0"
 
-libraryDependencies += Defaults.sbtPluginExtra("com.twitter" % "sbt-package-dist" % "1.0.0", "0.11.2", "2.9.1")
+addSbtPlugin("net.virtual-void" % "sbt-cross-building" % "0.7.0")
+
+addSbtPlugin("com.github.mpeltonen" % "sbt-idea" % "1.1.0")
