@@ -5,7 +5,7 @@ import sbt._
 import Keys._
 
 /**
- * build a twitter style packgae containing the packaged jar, all its deps,
+ * build a twitter style package containing the packaged jar, all its deps,
  * configs, scripts, etc.
  */
 object PackageDist extends Plugin {
